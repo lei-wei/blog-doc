@@ -55,7 +55,7 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-include: ["docs/tests/"]
+# include: ["docs/tests/"]
 
 # Set a path/url to a logo that will be displayed instead of the title
 # logo: "/assets/images/pwa_icon_mlld_512.png"

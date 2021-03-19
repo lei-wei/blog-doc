@@ -1,5 +1,4 @@
 ---
-layout: default
 title: hi，这里是我的博客
 nav_order: 1
 description:
