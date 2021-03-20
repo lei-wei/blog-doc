@@ -1,42 +1,96 @@
 ---
-title: hi，这里是我的博客
+layout: default
+title: Home
 nav_order: 1
-description:
+description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+permalink: /
 ---
 
-## hi，这里是我的博客
----
-终于把个人网站搭建起来了！真是不容易呢，有这个想法很久了，走了很多弯路，最后终于还是做出来了。还不太完善，日后会一边写内容一边将网站继续完善完善。
-#### 博客项目
-不得不感叹GitHub太强了！尝试过一些其他的方式，最后还是选择了白嫖~~(bushi)~~ 。
+# Focus on writing good documentation
+{: .fs-9 }
 
-这里是我的[博客项目主页](https://github.com/lei-wei/lei-wei.github.io)，折腾很麻烦，但我还是折腾了很久。目前看得懂部分的不多，目标是把相关的技术达到会使用的程度，然后把我的博客再完全个人定制一下。
-#### 域名
-域名是[阿里云](https://wanwang.aliyun.com/)上首年五块钱买的，起名字的时候还是小小纠结了一下，转念一想五块钱还要什么自行车！于是简单粗暴地整就完了。
+Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
+{: .fs-6 .fw-300 }
 
-## 总想写点什么东西
----
-博客说到底也就是一个特殊一点的展示信息的平台，重要的还是内容，所以接下来不出意外的话我会尽可能地做一些尝试，往网站上推一些奇奇怪怪的内容，不要太在意哈。
-
-
-### 一些计划
-日常琐碎的会随便写写，想到啥写啥，不会有什么顾忌。
-
-包括
-- 日常/回忆录
-- 成体系的学习笔记
-- 不成熟的想法，希望它们能慢慢变得成熟
+[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/pmarsceill/just-the-docs){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
-写完了的东西会不定期修改整理，自己整的好处就在于——我有完整的控制权，不会留下什么黑历史的~（也许）
+## Getting started
 
-- 太琐碎的也许会删掉（不会的）
-- 类似美食之类的，可能会合并内容做成长篇
-- 一些的想法心路，会根据tag标签功能做成集合吧，
-- 个人回忆录系列
+### Dependencies
 
-具体怎么做谁知道呢，哪来那么多规则，写了再说吧！
+Just the Docs is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/) for more information. Just the Docs requires no special plugins and can run on GitHub Pages' standard Jekyll compiler. The [Jekyll SEO Tag plugin](https://github.com/jekyll/jekyll-seo-tag) is included by default (no need to run any special installation) to inject SEO and open graph metadata on docs pages. For information on how to configure SEO and open graph metadata visit the [Jekyll SEO Tag usage guide](https://jekyll.github.io/jekyll-seo-tag/usage/).
 
-就从这一篇开始。
+### Quick start: Use as a GitHub Pages remote theme
 
+1. Add Just the Docs to your Jekyll site's `_config.yml` as a [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/)
+```yaml
+remote_theme: pmarsceill/just-the-docs
+```
+<small>You must have GitHub Pages enabled on your repo, one or more Markdown files, and a `_config.yml` file. [See an example repository](https://github.com/pmarsceill/jtd-remote)</small>
+
+### Local installation: Use the gem-based theme
+
+1. Install the Ruby Gem
+```bash
+$ gem install just-the-docs
+```
+```yaml
+# .. or add it to your your Jekyll site’s Gemfile
+gem "just-the-docs"
+```
+2. Add Just the Docs to your Jekyll site’s `_config.yml`
+```yaml
+theme: "just-the-docs"
+```
+3. _Optional:_ Initialize search data (creates `search-data.json`)
+```bash
+$ bundle exec just-the-docs rake search:init
+```
+3. Run you local Jekyll server
+```bash
+$ jekyll serve
+```
+```bash
+# .. or if you're using a Gemfile (bundler)
+$ bundle exec jekyll serve
+```
+4. Point your web browser to [http://localhost:4000](http://localhost:4000)
+
+If you're hosting your site on GitHub Pages, [set up GitHub Pages and Jekyll locally](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll) so that you can more easily work in your development environment.
+
+### Configure Just the Docs
+
+- [See configuration options]({{ site.baseurl }}{% link docs/configuration.md %})
+
+---
+
+## About the project
+
+Just the Docs is &copy; 2017-{{ "now" | date: "%Y" }} by [Patrick Marsceill](http://patrickmarsceill.com).
+
+### License
+
+Just the Docs is distributed by an [MIT license](https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt).
+
+### Contributing
+
+When contributing to this repository, please first discuss the change you wish to make via issue,
+email, or any other method with the owners of this repository before making a change. Read more about becoming a contributor in [our GitHub repo](https://github.com/pmarsceill/just-the-docs#contributing).
+
+#### Thank you to the contributors of Just the Docs!
+
+<ul class="list-style-none">
+{% for contributor in site.github.contributors %}
+  <li class="d-inline-block mr-1">
+     <a href="{{ contributor.html_url }}"><img src="{{ contributor.avatar_url }}" width="32" height="32" alt="{{ contributor.login }}"/></a>
+  </li>
+{% endfor %}
+</ul>
+
+### Code of Conduct
+
+Just the Docs is committed to fostering a welcoming community.
+
+[View our Code of Conduct](https://github.com/pmarsceill/just-the-docs/tree/master/CODE_OF_CONDUCT.md) on our GitHub repository.
